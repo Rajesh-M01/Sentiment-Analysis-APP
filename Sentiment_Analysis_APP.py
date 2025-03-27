@@ -27,7 +27,8 @@ for dirname, _, filenames in os.walk('/kaggle/input'):
 
 import pandas as pd
 
-df = pd.read_csv("/content/sentimentanalysistest.csv", encoding="ISO-8859-1")
+df = pd.read_csv("https://raw.githubusercontent.com/Rajesh-M01/Sentiment-Analysis-APP/main/sentimentanalysistest.csv", encoding="ISO-8859-1")
+
 
 import pandas as pd
 import numpy as np
