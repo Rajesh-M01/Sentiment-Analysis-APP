@@ -330,36 +330,3 @@ if st.button("Predict Sentiment"):
         st.warning("⚠️ Please enter some text before predicting!")
 
 
-
-# Commented out IPython magic to ensure Python compatibility.
-# %%writefile app.py
-# import streamlit as st
-# from transformers import TFBertForSequenceClassification, BertTokenizer
-# import numpy as np
-# 
-# @st.cache_resource
-# def load_model():
-#     model = TFBertForSequenceClassification.from_pretrained("bert_sentiment_model")
-#     tokenizer = BertTokenizer.from_pretrained("bert_sentiment_model")
-#     return model, tokenizer
-# 
-# model, tokenizer = load_model()
-# 
-# def predict_sentiment(text):
-#     inputs = tokenizer(text, return_tensors="tf", padding=True, truncation=True, max_length=128)
-#     logits = model(inputs["input_ids"]).logits
-#     sentiment_mapping = {0: "Negative", 1: "Neutral", 2: "Positive"}
-#     return sentiment_mapping[np.argmax(logits)]
-# 
-# st.title("🔥 Sentiment Analysis Web App 🔥")
-# st.write("Enter a sentence below to analyze its sentiment.")
-# 
-# user_input = st.text_area("Enter text here:")
-# if st.button("Predict Sentiment"):
-#     if user_input.strip():
-#         sentiment = predict_sentiment(user_input)
-#         st.success(f"Predicted Sentiment: **{sentiment}**")
-#     else:
-#         st.warning("⚠️ Please enter some text before predicting!")
-#
-
